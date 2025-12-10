@@ -60,14 +60,18 @@ void* IntertionalSort(void* args) {
     return NULL;
 }
 
-int MaxSizeOfRuns(int size) {
-    int n = size, r = 0;
+int MinRunSize(int array_size) {
+    int r = 0;
+    int n = array_size;
     while (n >= 64) {
-        r |= (n & 1);
-        n >>= 1;
+        if (n % 2 != 0) {
+            r = 1;
+        }
+        n /= 2;
     }
     return n + r;
 }
+
 
 int count_numbers_in_file(FILE* file) {
     int count = 0;
@@ -124,7 +128,7 @@ int main(int argc, char* argv[]) {
         }
     }
     if (input != stdin) fclose(input);
-    int min_size_of_run = MaxSizeOfRuns(size);
+    int min_size_of_run = MinRunSize(size);
     printf("Минимальный размер каждого run'а: %d\n", min_size_of_run);
     int count_of_runs = (size + min_size_of_run - 1) / min_size_of_run;
     printf("Количество подмассивов run: %d\n", count_of_runs);
@@ -134,7 +138,15 @@ int main(int argc, char* argv[]) {
         run_params[i].start = i * min_size_of_run;
         run_params[i].len = (i == count_of_runs - 1) ? (size - i * min_size_of_run) : min_size_of_run;
     }
-    pthread_t* threads = malloc(sizeof(pthread_t) * (max_count_of_threads > 0 ? max_count_of_threads : 1));
+    pthread_t* threads = NULL;
+
+    if (max_count_of_threads > 0) {
+        threads = malloc(sizeof(pthread_t) * max_count_of_threads);
+    if (!threads) {
+        printf("Ошибка выделения памяти для потоков!\n");
+        return 1;
+    }
+    }   
     struct timespec start_time, end_time;
     clock_gettime(CLOCK_MONOTONIC, &start_time);  
     if (max_count_of_threads >= count_of_runs) {
