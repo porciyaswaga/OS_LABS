@@ -1,0 +1,112 @@
+172   execve("/usr/bin/env", ["env", "LD_LIBRARY_PATH=.", "./dynamic"], 0x7ffdad142678 /* 12 vars */) = 0
+172   brk(NULL)                         = 0x608dbb557000
+172   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+172   openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+172   fstat(3, {st_mode=S_IFREG|0644, st_size=21784, ...}) = 0
+172   mmap(NULL, 21784, PROT_READ, MAP_PRIVATE, 3, 0) = 0x744532aa4000
+172   close(3)                          = 0
+172   openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+172   read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260>\2\0\0\0\0\0"..., 832) = 832
+172   fstat(3, {st_mode=S_IFREG|0755, st_size=1901536, ...}) = 0
+172   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x744532aa2000
+172   mmap(NULL, 1914496, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7445328ce000
+172   mmap(0x7445328f0000, 1413120, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22000) = 0x7445328f0000
+172   mmap(0x744532a49000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x17b000) = 0x744532a49000
+172   mmap(0x744532a98000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c9000) = 0x744532a98000
+172   mmap(0x744532a9e000, 13952, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x744532a9e000
+172   close(3)                          = 0
+172   arch_prctl(ARCH_SET_FS, 0x744532aa3580) = 0
+172   mprotect(0x744532a98000, 16384, PROT_READ) = 0
+172   mprotect(0x608daffb6000, 4096, PROT_READ) = 0
+172   mprotect(0x744532ad4000, 4096, PROT_READ) = 0
+172   munmap(0x744532aa4000, 21784)     = 0
+172   brk(NULL)                         = 0x608dbb557000
+172   brk(0x608dbb578000)               = 0x608dbb578000
+172   execve("./dynamic", ["./dynamic"], 0x608dbb557400 /* 13 vars */) = 0
+172   brk(NULL)                         = 0x5cc86f6f4000
+172   access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+172   openat(AT_FDCWD, "./tls/haswell/x86_64/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+172   openat(AT_FDCWD, "./tls/haswell/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+172   openat(AT_FDCWD, "./tls/x86_64/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+172   openat(AT_FDCWD, "./tls/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+172   openat(AT_FDCWD, "./haswell/x86_64/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+172   openat(AT_FDCWD, "./haswell/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+172   openat(AT_FDCWD, "./x86_64/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+172   openat(AT_FDCWD, "./libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+172   openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+172   fstat(3, {st_mode=S_IFREG|0644, st_size=21784, ...}) = 0
+172   mmap(NULL, 21784, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7265affd5000
+172   close(3)                          = 0
+172   openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+172   read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\21\0\0\0\0\0\0"..., 832) = 832
+172   fstat(3, {st_mode=S_IFREG|0644, st_size=18688, ...}) = 0
+172   mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7265affd3000
+172   mmap(NULL, 20752, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7265affcd000
+172   mmap(0x7265affce000, 8192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7265affce000
+172   mmap(0x7265affd0000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7265affd0000
+172   mmap(0x7265affd1000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7265affd1000
+172   close(3)                          = 0
+172   openat(AT_FDCWD, "./tls/haswell/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+172   openat(AT_FDCWD, "./tls/haswell/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+172   openat(AT_FDCWD, "./tls/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+172   openat(AT_FDCWD, "./tls/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+172   openat(AT_FDCWD, "./haswell/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+172   openat(AT_FDCWD, "./haswell/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+172   openat(AT_FDCWD, "./x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+172   openat(AT_FDCWD, "./libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+172   openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+172   read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260>\2\0\0\0\0\0"..., 832) = 832
+172   fstat(3, {st_mode=S_IFREG|0755, st_size=1901536, ...}) = 0
+172   mmap(NULL, 1914496, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7265afdf9000
+172   mmap(0x7265afe1b000, 1413120, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22000) = 0x7265afe1b000
+172   mmap(0x7265aff74000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x17b000) = 0x7265aff74000
+172   mmap(0x7265affc3000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c9000) = 0x7265affc3000
+172   mmap(0x7265affc9000, 13952, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7265affc9000
+172   close(3)                          = 0
+172   mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7265afdf6000
+172   arch_prctl(ARCH_SET_FS, 0x7265afdf6740) = 0
+172   mprotect(0x7265affc3000, 16384, PROT_READ) = 0
+172   mprotect(0x7265affd1000, 4096, PROT_READ) = 0
+172   mprotect(0x5cc83127a000, 4096, PROT_READ) = 0
+172   mprotect(0x7265b0005000, 4096, PROT_READ) = 0
+172   munmap(0x7265affd5000, 21784)     = 0
+172   brk(NULL)                         = 0x5cc86f6f4000
+172   brk(0x5cc86f715000)               = 0x5cc86f715000
+172   openat(AT_FDCWD, "./lib1.so", O_RDONLY|O_CLOEXEC) = 3
+172   read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\20\0\0\0\0\0\0"..., 832) = 832
+172   fstat(3, {st_mode=S_IFREG|0755, st_size=15920, ...}) = 0
+172   getcwd("/workspace/laba4", 128)   = 17
+172   mmap(NULL, 16432, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7265affd6000
+172   mmap(0x7265affd7000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7265affd7000
+172   mmap(0x7265affd8000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7265affd8000
+172   mmap(0x7265affd9000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7265affd9000
+172   close(3)                          = 0
+172   mprotect(0x7265affd9000, 4096, PROT_READ) = 0
+172   fstat(0, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}) = 0
+172   read(0, "1 121 11\n", 1024)       = 9
+172   fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}) = 0
+172   write(1, "11\n", 3)               = 3
+172   read(0, "2 3\n", 1024)            = 4
+172   write(1, "11\n", 3)               = 3
+172   read(0, "0\n", 1024)              = 2
+172   munmap(0x7265affd6000, 16432)     = 0
+172   openat(AT_FDCWD, "./lib2.so", O_RDONLY|O_CLOEXEC) = 3
+172   read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\20\0\0\0\0\0\0"..., 832) = 832
+172   fstat(3, {st_mode=S_IFREG|0755, st_size=15920, ...}) = 0
+172   getcwd("/workspace/laba4", 128)   = 17
+172   mmap(NULL, 16432, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7265affd6000
+172   mmap(0x7265affd7000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7265affd7000
+172   mmap(0x7265affd8000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7265affd8000
+172   mmap(0x7265affd9000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7265affd9000
+172   close(3)                          = 0
+172   mprotect(0x7265affd9000, 4096, PROT_READ) = 0
+172   write(1, "\320\241\320\234\320\225\320\235\320\257 \320\237\320\240\320\236\320\223\320\240\320\220\320\234\320\234\320\2532\n", 31) = 31
+172   read(0, "1 121 11\n", 1024)       = 9
+172   write(1, "11\n", 3)               = 3
+172   read(0, "2 3\n", 1024)            = 4
+172   write(1, "10\n", 3)               = 3
+172   read(0, "-1\n", 1024)             = 3
+172   munmap(0x7265affd6000, 16432)     = 0
+172   lseek(0, -1, SEEK_CUR)            = -1 ESPIPE (Illegal seek)
+172   exit_group(0)                     = ?
+172   +++ exited with 0 +++
