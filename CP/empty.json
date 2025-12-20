@@ -1,0 +1,10 @@
+{
+  "mutexes": [],
+  "jobs": [
+    {
+      "id": "A",
+      "deps": [],
+      "work_time": 2
+    }
+  ]
+}
