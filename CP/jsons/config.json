@@ -1,0 +1,29 @@
+{
+  "mutexes": ["m1", "m2"],
+
+  "jobs": [
+    {
+      "id": "A",
+      "deps": [],
+      "mutex": "m1",
+      "work_time": 2
+    },
+    {
+      "id": "B",
+      "deps": ["A"],
+      "mutex": "m1",
+      "work_time": 3
+    },
+    {
+      "id": "C",
+      "deps": ["A"],
+      "mutex": "m2",
+      "work_time": 2
+    },
+    {
+      "id": "D",
+      "deps": ["B", "C"],
+      "work_time": 1
+    }
+  ]
+}
