@@ -64,11 +64,11 @@ void radixSort(Object* a, int n) {
 }
 
 int main() {
-    static Object a[MAXN];
-    char line[2100];
+    Object* a = new Object[MAXN];
+    char line[2082];
     int n = 0;
 
-    while (n < MAXN && std::cin.getline(line, 2100)) {
+    while (n < MAXN && std::cin.getline(line, 2082)) {
         if (!line[0]) {
             continue;
         }
@@ -100,5 +100,6 @@ int main() {
         std::cout << a[i].key << '\t' << a[i].value << '\n';
     }
 
+    delete[] a;
     return 0;
 }
