@@ -1,6 +1,6 @@
 #include <iostream>
 
-const int MAXN = 65000;
+const int MAXN =40000;
 
 struct Object {
     char key[33];
